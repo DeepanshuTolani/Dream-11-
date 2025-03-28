@@ -1,0 +1,28 @@
+// System Architecture for Dream11 Prediction
+digraph {
+	rankdir=LR
+	node [fillcolor=lightblue fontname=Arial shape=rectangle style=filled]
+	edge [arrowhead=normal color=black]
+	A [label="Data Processing
+Module"]
+	B [label="Feature Extraction
+Module"]
+	C [label="Machine Learning
+Models"]
+	D [label="Prediction
+Module"]
+	IPL [label="IPL Data
+(2008-2017)" fillcolor=lightgreen shape=ellipse]
+	KF [label="Key Features" fillcolor=lightyellow shape=note]
+	TM [label="Trained Models" fillcolor=lightyellow shape=note]
+	PR [label="Player Rankings" fillcolor=lightgreen shape=ellipse]
+	FS [label="Fantasy Scores" fillcolor=lightgreen shape=ellipse]
+	IPL -> A
+	A -> B
+	B -> KF
+	B -> C
+	C -> TM
+	C -> D
+	D -> PR
+	D -> FS
+}
